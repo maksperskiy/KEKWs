@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block body %}
+    <div class="videowindow">
+        <video controls height="720px" width="1280px">
+            <source src="{{url_for('static', filename='video.mp4')}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+        <div class="subtitles">
+             <span id="sub_translate"></span>
+            <br/>
+            <span id="sub_text"></span>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+{% endblock %}
